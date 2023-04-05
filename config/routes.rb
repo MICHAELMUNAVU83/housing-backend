@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :bookings
+  resources :properties
+
+  get "my_bookings/:id", to: "bookings#my_bookings"
   # config/routes.rb
   namespace :api do
     namespace :v1 do
